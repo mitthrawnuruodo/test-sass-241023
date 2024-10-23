@@ -1,0 +1,18 @@
+@use 'variables';
+@use 'mixins';
+@use 'sass:map';
+
+.base-button {
+  @include mixins.button-style(primary);
+}
+
+main {
+  padding: map.get(variables.$spacing, medium);
+  font-family: variables.$font-stack;
+  color: variables.$font-color;
+
+  .button {
+    @extend .base-button;
+    margin-top: 20px;
+  }
+}

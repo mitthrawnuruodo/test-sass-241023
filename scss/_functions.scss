@@ -1,0 +1,10 @@
+@use 'variables';
+@use 'sass:color';
+
+@function text-color($background) {
+  @if (color.channel($background, 'lightness', $space: hsl) > 50%) {
+    @return variables.$font-color;
+  } @else {
+    @return white;
+  }
+}

@@ -1,0 +1,9 @@
+@use 'variables';
+@use 'functions';
+
+footer {
+  background-color: variables.$secondary-color;
+  color: functions.text-color(variables.$secondary-color);
+  text-align: center;
+  padding: 10px;
+}
